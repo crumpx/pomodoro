@@ -1,0 +1,163 @@
+body {
+			background-color: #333333;
+			color: #fff;
+			font-family: 'Josefin Slab', serif;
+			-webkit-user-select: none; /* Chrome/Safari */        
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+ */
+		}
+		.container {
+			margin-top: 4%;
+      text-align: center;
+		}
+		.appName {
+			color: #F17105;
+			font-family: 'Russo One', sans-serif;
+		}
+
+		.time-setup {
+			font-family: 'Anonymous Pro', monospace;
+			font-size: 20px;
+			text-align: center;
+			
+		}
+
+		.break-time-set{
+			
+			display: inline-block;
+		}
+
+		.work-time-set {
+			
+			display: inline-block;
+		}
+
+		div#breakminus {
+			cursor:pointer;
+			font-size: 40px;
+			display: inline-block;	
+		}
+
+		div#breaktime {
+			font-size: 40px;
+			display: inline-block;
+		}
+
+		div#breakplus {
+			cursor:pointer;
+			font-size: 40px;
+			display: inline-block;
+		}
+
+		.work-time-set {
+			padding-left: 20px;
+			display: inline-block;
+		}
+
+		.titleFonts {
+			font-size: 22px;
+		}
+
+		div#workminus {
+			cursor:pointer;
+			font-size: 40px;
+			display: inline-block;	
+		}
+
+		div#worktime {
+			font-size: 40px;
+			display: inline-block;
+		}
+
+		div#workplus {
+			cursor:pointer;
+			font-size: 40px;
+			display: inline-block;
+		}
+
+		#clockContainer {
+			
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.clockOuter {
+			cursor:pointer;
+			padding-top: -2px;
+			width: 280px;
+			height: 280px;
+			margin: 0 auto;
+			position:relative;
+      		border: 2px #329F5B dashed;
+	        -webkit-border-radius: 50%;
+		}
+
+		.clockOuter:after, .colockOuter:before {
+			content: '';
+			display: block;
+			width:280px;
+			height: 280px;
+			border-radius: 50%
+		}
+
+		.spinner-1:after {
+			width: 280px;
+			height: 280px;
+			position: absolute;
+			top:-4px;
+			left:-4px;
+			border: 4px solid transparent;
+			border-top-color: LimeGreen;
+			animation: spin1 3s linear infinite;
+		}
+
+		@keyframes spin1 {
+			0% {transform: rotate(0deg)}
+			100% {transform: rotate(360deg)}
+		}
+
+		.spinner-2:after {
+			width: 280px;
+			height: 280px;
+			position: absolute;
+/*			background-color: pink;*/
+			top:-4px;
+			left:-4px;
+			border: 4px solid transparent;
+			border-top-color: orangered;
+/*			border-bottom-color: orangered;*/
+			animation: spin2 3s linear infinite;
+		}
+
+		@keyframes spin2 {
+			0% {transform: rotate(0deg)}
+			0% {transform: rotate(360deg)}
+		}
+
+		.clockWords {
+			padding-top: 80px;
+			font-size: 40px;
+		}
+		.remainingTime {
+			padding-top: 30px;
+		}
+
+#footer {
+  font-family: 'Josefin Sans', sans-serif;
+  position: relative;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 80px;
+  width: 100%;
+  height: 40px;
+  
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  color: orangered;
+  text-decoration: none !important;
+  outline: none !important;
+}
