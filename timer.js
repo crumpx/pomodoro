@@ -52,6 +52,7 @@ $(document).ready(function(){
 				second = worktime % 60 > 9 ? parseInt(worktime % 60) :'0'+ (worktime % 60)
 				$('.remainingTime').html(  minute + ':'+ second );
 				if (worktime === 0){
+					timesup.load();
 					timesup.play();
 					clearInterval(counter);
 					startBreak = setInterval(breakTimer, 1000);	
@@ -69,6 +70,7 @@ $(document).ready(function(){
 					second = breaktime % 60 > 9 ? parseInt(breaktime % 60) :'0'+ (breaktime % 60);
 				$('.remainingTime').html(  minute + ':'+ second );
 					if(breaktime === 0){
+						timesup.load();
 						timesup.play();
 						clearInterval(startBreak);
 						counter = null;
