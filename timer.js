@@ -3,6 +3,7 @@ $(document).ready(function(){
 		var counter = '';
 		var startBreak = '';
 		var timesup = $('#timesup')[0];
+		var ticking = $('#ticking')[0];
 
 		$('.remainingTime').html($('#worktime')[0].innerText + ' Minutes');
 
@@ -51,8 +52,11 @@ $(document).ready(function(){
 				minute = parseInt(worktime / 60 );
 				second = worktime % 60 > 9 ? parseInt(worktime % 60) :'0'+ (worktime % 60)
 				$('.remainingTime').html(  minute + ':'+ second );
+				if (worktime <= 5 && worktime !== 0) {
+					ticking.play();
+				}
+
 				if (worktime === 0){
-					timesup.load();
 					timesup.play();
 					clearInterval(counter);
 					startBreak = setInterval(breakTimer, 1000);	
@@ -69,6 +73,9 @@ $(document).ready(function(){
 					minute = parseInt(breaktime/60);
 					second = breaktime % 60 > 9 ? parseInt(breaktime % 60) :'0'+ (breaktime % 60);
 				$('.remainingTime').html(  minute + ':'+ second );
+					if (worktime <=5 && worktime !== 0) {
+						ticking.play();
+					}
 					if(breaktime === 0){
 						timesup.load();
 						timesup.play();
